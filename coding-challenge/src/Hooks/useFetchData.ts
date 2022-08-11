@@ -1,24 +1,19 @@
 import {useState, useEffect} from "react"
 
+const location = `../../data.json`
+
 export const useFetchData = () => {
     const [ data, setData ] = useState<any[]>([])
 
     useEffect(() => {
-        const fetchData = () =>{
-            //fetch data
-            fetch("../../data.json",{
-                headers: {
-                    "content-type": "application/json;charset=UTF-8",
-                  },
-            }).then(
-                res => res.json()
-            ).then(
-                jsonData => {
-                    setData(jsonData.data)
-                }
-            )
+        const fetchData = async () =>{
+            const response = await fetch(location)
+            const jsonData = await response.json()
+            setData(jsonData.data) 
         }
+
         fetchData()
+        
     },[])
     return data
 }
