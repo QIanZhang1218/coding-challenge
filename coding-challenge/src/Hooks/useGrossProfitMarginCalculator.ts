@@ -6,5 +6,5 @@ export const useGrossProfitMargin = (data:any[],revenue:number) => {
             totalSales += item.total_value;
         }
     })
-    console.log(totalSales);
+    return (totalSales/revenue*100).toFixed(1);
 }

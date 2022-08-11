@@ -18,6 +18,7 @@ function App() {
       <h1>9Spokes Coding-Challenge:</h1>
       <h5>Revenue:${totalRevenue.totalRevenue}</h5>
       <h5>Expense:${totalExpense}</h5>
+      <h5>Gross Profit Margin:{grossProfitMargin}%</h5>
     </div>
   );
 }
