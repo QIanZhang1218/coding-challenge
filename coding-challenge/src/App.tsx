@@ -6,8 +6,9 @@ import { useGrossProfitMargin } from "./Hooks/useGrossProfitMarginCalculator";
 import { useNetProfitMargin } from "./Hooks/useNetProfitMarginCalculator";
 import { useWorkingCapitalRatio } from "./Hooks/useWorkingCapitalRatioCalculator";
 
-function App() {
+const App = () => {
   const data = useFetchData();
+
   const totalRevenue = useRevenueCalculator(data);
   const totalExpense = useExpenseCalculator(data);
   const grossProfitMargin = useGrossProfitMargin(
@@ -30,6 +31,6 @@ function App() {
       <h5>Working Capital Ratio:{workingCapitalRatio}%</h5>
     </div>
   );
-}
+};
 
 export default App;
