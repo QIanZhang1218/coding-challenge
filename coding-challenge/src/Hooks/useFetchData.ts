@@ -1,7 +1,12 @@
-import {useState,useEffect} from "react"
+import {useState, useEffect} from "react"
 
 export const useFetchData = () => {
-    const [data,setData] = useState([]);
+    const [ data, setData ] = useState<any[]>([]);
+    console.log(1)
+
+    // useEffect(() => {
+      
+    // },[]);
 
     const fetchData = () =>{
         //fetch data
@@ -13,12 +18,11 @@ export const useFetchData = () => {
             res => res.json()
         ).then(
             jsonData => {
-                setData(jsonData.data);
+                setData(jsonData);
             }
         )
     }
-    useEffect(() => {
-        fetchData();
-    },[]);
+    fetchData();
+    
     return data;
 }
