@@ -6,5 +6,5 @@ export const useExpenseCalculator = (data:any[]) => {
             totalExpense += item.total_value;
         }
     })
-    return totalExpense;
+    return Math.floor(totalExpense);
 }

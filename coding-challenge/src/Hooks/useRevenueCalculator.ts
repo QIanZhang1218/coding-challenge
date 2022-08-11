@@ -6,5 +6,5 @@ export const useRevenueCalculator = (data:any[]) => {
             totalRevenue += item.total_value;
         }
     })
-    return totalRevenue;
+    return Math.floor(totalRevenue);
 }
