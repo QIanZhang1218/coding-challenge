@@ -6,5 +6,5 @@ export const useRevenueCalculator = (data:any[]) => {
             totalRevenue += item.total_value;
         }
     })
-    return Math.floor(totalRevenue);
+    return Math.floor(totalRevenue).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 }

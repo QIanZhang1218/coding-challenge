@@ -6,5 +6,5 @@ export const useExpenseCalculator = (data:any[]) => {
             totalExpense += item.total_value;
         }
     })
-    return Math.floor(totalExpense);
+    return Math.floor(totalExpense).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 }
