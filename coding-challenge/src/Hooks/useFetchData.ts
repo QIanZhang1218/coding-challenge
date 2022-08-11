@@ -13,7 +13,7 @@ export const useFetchData = () => {
             res => res.json()
         ).then(
             jsonData => {
-                setData(jsonData);
+                setData(jsonData.data);
             }
         )
     }
