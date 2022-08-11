@@ -3,6 +3,7 @@ import { useFetchData } from "./Hooks/useFetchData";
 import { useRevenueCalculator } from "./Hooks/useRevenueCalculator";
 import { useExpenseCalculator } from "./Hooks/useExpenseCalculator";
 import { useGrossProfitMargin } from "./Hooks/useGrossProfitMarginCalculator";
+import { useNetProfitMargin } from "./Hooks/useNetProfitMarginCalcualtor";
 
 function App() {
   const data = useFetchData();
@@ -12,6 +13,7 @@ function App() {
     data,
     totalRevenue.revenueToUse
   );
+  const netProfitMargin = useNetProfitMargin(totalExpense);
 
   return (
     <div className="App">
