@@ -13,13 +13,16 @@ function App() {
     data,
     totalRevenue.revenueToUse
   );
-  const netProfitMargin = useNetProfitMargin(totalExpense);
+  const netProfitMargin = useNetProfitMargin(
+    totalExpense.expenseToUse,
+    totalRevenue.revenueToUse
+  );
 
   return (
     <div className="App">
       <h1>9Spokes Coding-Challenge:</h1>
       <h5>Revenue:${totalRevenue.totalRevenue}</h5>
-      <h5>Expense:${totalExpense}</h5>
+      <h5>Expense:${totalExpense.totalExpense}</h5>
       <h5>Gross Profit Margin:{grossProfitMargin}%</h5>
     </div>
   );
