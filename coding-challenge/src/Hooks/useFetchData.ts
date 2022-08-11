@@ -5,7 +5,7 @@ export const useFetchData = () => {
 
     const fetchData = () =>{
         //fetch data
-        fetch("./data,json",{
+        fetch("../../data.json",{
             headers: {
                 "content-type": "application/json;charset=UTF-8",
               },
@@ -20,6 +20,5 @@ export const useFetchData = () => {
     useEffect(() => {
         fetchData();
     },[]);
-    console.log(data);
     return data;
 }
