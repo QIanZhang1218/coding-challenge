@@ -4,6 +4,7 @@ import { useRevenueCalculator } from "./Hooks/useRevenueCalculator";
 import { useExpenseCalculator } from "./Hooks/useExpenseCalculator";
 import { useGrossProfitMargin } from "./Hooks/useGrossProfitMarginCalculator";
 import { useNetProfitMargin } from "./Hooks/useNetProfitMarginCalculator";
+import { useWorkingCapitalRatio } from "./Hooks/useWorkingCapitalRatioCalculator";
 
 function App() {
   const data = useFetchData();
@@ -17,6 +18,7 @@ function App() {
     totalExpense.expenseToUse,
     totalRevenue.revenueToUse
   );
+  const workingCapitalRatio = useWorkingCapitalRatio(data);
 
   return (
     <div className="App">
@@ -25,6 +27,7 @@ function App() {
       <h5>Expense:${totalExpense.totalExpense}</h5>
       <h5>Gross Profit Margin:{grossProfitMargin}%</h5>
       <h5>Net Profit Margin:{netProfitMargin}%</h5>
+      <h5>Working Capital Ratio:{workingCapitalRatio}%</h5>
     </div>
   );
 }
