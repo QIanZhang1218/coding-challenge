@@ -24,6 +24,7 @@ function App() {
       <h5>Revenue:${totalRevenue.totalRevenue}</h5>
       <h5>Expense:${totalExpense.totalExpense}</h5>
       <h5>Gross Profit Margin:{grossProfitMargin}%</h5>
+      <h5>Net Profit Margin:{netProfitMargin}%</h5>
     </div>
   );
 }
