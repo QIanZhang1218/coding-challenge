@@ -8,6 +8,7 @@ function App() {
   return (
     <div className="App">
       <h1>9Spokes Coding-Challenge:</h1>
+      <h5>Revenue:${totalRevenue}</h5>
     </div>
   );
 }
